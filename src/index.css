@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    background-color: #FDFBF7;
+    color: #4A5568;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Nunito', sans-serif;
+    color: #2D3748;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-charcoal font-inter text-sm
+           placeholder-slate-light focus:outline-none focus:ring-2 focus:ring-sage focus:border-transparent
+           transition-all duration-200;
+  }
+
+  .select-field {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-charcoal font-inter text-sm
+           focus:outline-none focus:ring-2 focus:ring-sage focus:border-transparent
+           transition-all duration-200 cursor-pointer appearance-none;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full
+           bg-sage text-white font-nunito font-bold text-base
+           hover:bg-sage-hover active:scale-95
+           transition-all duration-300 ease-in-out
+           disabled:opacity-60 disabled:cursor-not-allowed disabled:active:scale-100;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full
+           border border-sage text-sage font-inter font-medium text-sm
+           hover:bg-sage hover:text-white
+           transition-all duration-300 ease-in-out;
+  }
+
+  .card {
+    @apply bg-white rounded-3xl border border-gray-100 shadow-card
+           transition-all duration-300 ease-in-out;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-1 hover:shadow-card-hover;
+  }
+}
